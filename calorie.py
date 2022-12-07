@@ -124,17 +124,10 @@ def DER(rer):
             continue
 
 def FOOD(der) :
-    kcal = int(input("与えているフードの100gあたりのkcalを入力してください:"))
-
-
-"""
-DER（kcal/日）÷食物の代謝エネルギー密度（kcal/g）
-例えばパッケージに375kcal/100gと記載されている場合
-1ｇあたりのkcal数に変換します。➡3.75（kcal/g）
-DERが約191÷3.75＝約51ｇ
-１日の給与量が約51gとなります。
-あとは普段与えている回数で１回量を決めてください。
-"""
+    g_kcal = int(input("与えているフードの100gあたりのkcalを入力してください:"))
+    one_kcal = float(g_kcal / 100)
+    food = int(der / one_kcal)
+    return food
 
 rer = RER(weight)
 der = DER(rer)
@@ -142,4 +135,5 @@ food = FOOD(der)
 
 print("約" + str(rer) + "kcal")
 print("約" + str(der) + "kcal")
+print("約" + str(food) + "g")
 
