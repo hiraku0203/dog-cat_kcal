@@ -123,6 +123,7 @@ def DER(rer):
             print("1または2で入力")
             continue
 
+# 一日の必要なカロリーを計算
 def FOOD(der) :
     g_kcal = int(input("与えているフードの100gあたりのkcalを入力してください:"))
     one_kcal = float(g_kcal / 100)
@@ -133,7 +134,5 @@ rer = RER(weight)
 der = DER(rer)
 food = FOOD(der)
 
-print("約" + str(rer) + "kcal")
-print("約" + str(der) + "kcal")
 print("約" + str(food) + "g")
 
